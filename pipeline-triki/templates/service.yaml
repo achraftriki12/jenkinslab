@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: {{ .Values.frontend.service.type }}  # This will now use ClusterIP from values.yaml
+  ports:
+  - port: {{ .Values.frontend.service.port }}  # This will use port 80
+    targetPort: 80
+  selector:
+    app: frontend

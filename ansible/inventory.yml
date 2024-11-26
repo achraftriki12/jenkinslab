@@ -1,0 +1,6 @@
+all:
+  hosts:
+    minikube-vm:
+      ansible_host: host.docker.internal
+      ansible_user: achraf
+      ansible_password: 'segio ramos'

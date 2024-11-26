@@ -1,0 +1,8 @@
+frontend:
+  image: achraf873/jenkins-lab:latest
+  replicas: 2
+  strategy: RollingUpdate
+  imagePullPolicy: Always
+  service:
+    type: ClusterIP  # Change LoadBalancer to ClusterIP
+    port: 80
